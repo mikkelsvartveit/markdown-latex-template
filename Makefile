@@ -1,6 +1,7 @@
 pdf:
 	mkdir -p output
 	pandoc content/*.md \
+		--resource-path=content \
 		--citeproc \
 		--csl="assets/ieee.csl" \
 		--pdf-engine=xelatex \
