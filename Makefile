@@ -8,3 +8,6 @@ pdf:
 		--from=markdown+tex_math_single_backslash+tex_math_dollars+raw_tex \
 		--to=latex \
 		--output=output/paper.pdf \
+
+watch:
+	fswatch -o ./content/ | xargs -n1 -I{} make pdf
