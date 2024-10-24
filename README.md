@@ -12,4 +12,8 @@ This is a template for writing academic papers in Markdown. It uses Pandoc to co
 
 4. Run `make pdf` to compile the Markdown files to a PDF. The PDF will be saved to the `output` directory.
 
-5. Run `make watch` to automatically recompile the PDF when you make changes to the Markdown files.
+You can also use these commands:
+
+- `make watch`: automatically recompile the PDF when you make changes to the Markdown files.
+
+- `make latex`: output a LaTeX file instead of a PDF.
