@@ -2,11 +2,11 @@
 
 This is a template for writing academic papers in Markdown. It uses Pandoc to convert the Markdown files to LaTeX, and then compiles the LaTeX to a PDF. You can see the generated PDF of this template [here](https://mikkelsvartveit.github.io/markdown-latex-template/article.pdf).
 
-## Usage
+## Basic Usage
 
 1. Install [TeX Live](https://www.tug.org/texlive/), Pandoc, and fswatch.
 
-2. Write your paper in Markdown in the `content` directory. All Markdown files in the `content` directory will be compiled to a single PDF file. Check out the `content/02-main.md` file for an example of how to use different Markdown features.
+2. Write your paper in Markdown in the `content` directory. All Markdown files in the `content` directory will be compiled to a single PDF file. Check out the `content/01-main.md` file for an example of how to use different Markdown features.
 
 3. Add your references to the `assets/bibliography.bib` file.
 
@@ -19,6 +19,12 @@ You can also use these commands:
 - `make latex`: output a LaTeX file instead of a PDF.
 
 - `make wordcount`: calculate the word count across all Markdown files (except cover, appendix and references).
+
+## Github Pages
+
+This repository contains a GitHub Actions workflow that builds the PDF and deploys it to a public Github Pages site on every push to the `main` branch. You can see the generated PDF [here](https://mikkelsvartveit.github.io/markdown-latex-template/article.pdf).
+
+If you want to disable this for your own repository, simply delete the `.github/workflows/` directory.
 
 ## Customization
 
