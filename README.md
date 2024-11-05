@@ -19,3 +19,40 @@ You can also use these commands:
 - `make latex`: output a LaTeX file instead of a PDF.
 
 - `make wordcount`: calculate the word count across all Markdown files (except cover, appendix and references).
+
+## Customization
+
+### Styling and layout options
+
+The frontmatter of the `content/00-cover.md` file contains options related to the styling and layout of the document. Here you can change things like the font size, paper size, margins, and more.
+
+### Changing the font
+
+To change the font, you can add your font files to `assets/fonts`. Then, you need to specify the font in the Markdown frontmatter. For example, to use the font [Source Serif 4](https://github.com/adobe-fonts/source-serif), you could add these files to the `assets/fonts` directory:
+
+- SourceSerif4-Regular.ttf
+- SourceSerif4-SemiBold.ttf
+- SourceSerif4-It.ttf
+- SourceSerif4-SemiBoldIt.ttf
+
+Then, apply the font like this in the frontmatter of the `content/00-cover.md` file:
+
+```yaml
+mainfont: "SourceSerif4"
+
+mainfontoptions:
+  - Path=./assets/fonts/
+  - Extension=.ttf
+  - UprightFont=*-Regular
+  - BoldFont=*-SemiBold
+  - ItalicFont=*-It
+  - BoldItalicFont=*-SemiBoldIt
+```
+
+### Changing the LaTeX template
+
+Pandoc uses a reasonable default template for LaTeX, but if you want control over things that can't be specified in the Markdown frontmatter, you can add your own .tex file to use as a template. To get a starting point, you can run `pandoc -D latex` to print the default template, and then modify it from there. Save the file as `assets/template.tex`, and then add the `--template "assets/template.tex"` flag to the Pandoc commands in the Makefile.
+
+### Changing the bibliography style
+
+This repository is preconfigured with the IEEE citation style, but you can easily change it to another style. To do this, add your own .csl file to the `assets` directory, and then change the `csl` field in the frontmatter of `content/00-cover.md` to the path to your .csl file.
