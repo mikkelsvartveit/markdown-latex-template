@@ -1,6 +1,6 @@
 # Markdown template for academic writing
 
-This is a template for writing academic papers in Markdown. It uses Pandoc to convert the Markdown files to LaTeX, and then compiles the LaTeX to a PDF. You can see the generated PDF of this template [here](https://mikkelsvartveit.github.io/markdown-latex-template/paper.pdf).
+This is a template for writing academic papers in Markdown. It uses Pandoc to convert the Markdown files to LaTeX, and then compiles the LaTeX to a PDF. You can see the generated PDF of this template [here](https://mikkelsvartveit.github.io/markdown-latex-template/article.pdf).
 
 ## Usage
 
@@ -17,3 +17,5 @@ You can also use these commands:
 - `make watch`: automatically recompile the PDF when you make changes to the Markdown files.
 
 - `make latex`: output a LaTeX file instead of a PDF.
+
+- `make wordcount`: calculate the word count across all Markdown files (except cover, appendix and references).
