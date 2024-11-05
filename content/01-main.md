@@ -35,6 +35,8 @@ console.log(foobar);
 
 Here's a table:
 
+Table: Example table \label{my_table}
+
 | Left aligned | Center aligned | Right aligned |
 | :----------- | :------------: | ------------: |
 | Apple        |    1234.56     |           $12 |
