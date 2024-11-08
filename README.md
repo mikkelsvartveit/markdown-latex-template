@@ -4,7 +4,9 @@ This is a template for writing academic papers in Markdown. It uses Pandoc to co
 
 ## Basic Usage
 
-1. Install [TeX Live](https://www.tug.org/texlive/), Pandoc, and fswatch.
+This template is developed for macOS and Linux. If you're on Windows, use [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install).
+
+1. Install [TeX Live](https://www.tug.org/texlive/) and Pandoc.
 
 2. Write your paper in Markdown in the `content` directory. All Markdown files in the `content` directory will be compiled to a single PDF file. Check out the `content/01-main.md` file for an example of how to use different Markdown features.
 
@@ -14,7 +16,7 @@ This is a template for writing academic papers in Markdown. It uses Pandoc to co
 
 You can also use these commands:
 
-- `make watch`: automatically recompile the PDF when you make changes to the Markdown files.
+- `make watch`: automatically recompile the PDF when you make changes to the Markdown files (requires installing fswatch if you're on macOS).
 
 - `make latex`: output a LaTeX file instead of a PDF.
 

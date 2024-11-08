@@ -24,11 +24,18 @@ latex:
 		--output=./output/article.tex
 	@echo "Finished compiling LaTeX file."
 		
-# Listen for changes in the content directory and recompile the PDF when a file changes
 watch:
 	@make -s pdf || true
 	@echo "Watching for changes..."
+ifeq ($(shell uname -s),Darwin) # Use fswatch on macOS
 	@fswatch -0 ./content/ | xargs -0 -n 1 -I {} make -s pdf
+else # Use inotifywait on Linux/WSL
+	@inotifywait -r -m -e modify ./content/ | \
+	while read file_path file_event file_name; do  \
+		@make -s pdf; \
+	done
+endif
+
 
 # Count the words in the markdown files, excluding files starting with 00 or 9*
 wordcount:
