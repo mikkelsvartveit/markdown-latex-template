@@ -2,17 +2,36 @@
 
 This is a template for writing academic papers in Markdown. It uses Pandoc to convert the Markdown files to LaTeX, and then compiles the LaTeX to a PDF. You can see the generated PDF of this template [here](https://mikkelsvartveit.github.io/markdown-latex-template/article.pdf).
 
-## Basic Usage
+## Getting started
+
+### Running locally
 
 This template is developed for macOS and Linux. If you're on Windows, use [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install).
 
-1. Install [TeX Live](https://www.tug.org/texlive/) and Pandoc.
+You will need to install:
 
-2. Write your paper in Markdown in the `content` directory. All Markdown files in the `content` directory will be compiled to a single PDF file. Check out the `content/01-main.md` file for an example of how to use different Markdown features.
+- [TeX Live](https://www.tug.org/texlive/)
+- [Pandoc](https://pandoc.org/installing.html)
+- [fswatch](https://github.com/emcrisostomo/fswatch/releases) (if you're on macOS)
+- [inotify-tools](https://github.com/rvoicilas/inotify-tools/wiki) (if you're on Linux)
 
-3. Add your references to the `assets/bibliography.bib` file.
+### Running in GitHub Codespaces
 
-4. Run `make pdf` to compile the Markdown files to a PDF. The PDF will be saved to the `output` directory.
+If you want to avoid installing anything on your local machine, you can use [GitHub Codespaces](https://github.com/features/codespaces) to write in a browser-based development environment.
+
+1. Click the green "Use this template" button on the top right of this repository and create a new repository from it.
+
+2. Go to the new repository and click the "Code" button on the top right. Select "Codespaces" and click "Create codespace on main".
+
+Note that building the Codespace can take a while the first time you open it.
+
+## Basic Usage
+
+1. Write your paper in Markdown in the `content` directory. All Markdown files in the `content` directory will be compiled to a single PDF file. Check out the `content/01-main.md` file for an example of how to use different Markdown features.
+
+2. Add your references to the `assets/bibliography.bib` file.
+
+3. Run `make pdf` to compile the Markdown files to a PDF. The PDF will be saved to the `output` directory.
 
 You can also use these commands:
 
