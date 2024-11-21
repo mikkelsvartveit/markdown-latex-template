@@ -45,7 +45,9 @@ You can also use these commands:
 
 This repository contains a GitHub Actions workflow that builds the PDF and deploys it to a public Github Pages site on every push to the `main` branch. You can see the generated PDF [here](https://mikkelsvartveit.github.io/markdown-latex-template/article.pdf).
 
-If you want to disable this for your own repository, simply delete the `.github/workflows/` directory.
+To enable this for your own repository, go to the "Pages" tab of your repository settings, and select "GitHub Actions" as the source. Note that the generated PDF will be publically available even if your repository is private.
+
+If you want to disable this completely, simply delete the `.github/workflows/` directory.
 
 ## Customization
 
