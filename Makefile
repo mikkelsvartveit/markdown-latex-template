@@ -32,7 +32,7 @@ ifeq ($(shell uname -s),Darwin) # Use fswatch on macOS
 else # Use inotifywait on Linux/WSL
 	@inotifywait -r -m -e modify ./content/ | \
 	while read file_path file_event file_name; do  \
-		@make -s pdf; \
+		make -s pdf; \
 	done
 endif
 
