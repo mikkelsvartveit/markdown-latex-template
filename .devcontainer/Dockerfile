@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/python:3.12
+FROM mcr.microsoft.com/devcontainers/base:ubuntu-24.04
 
 # Install TeXLive and Pandoc
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
