@@ -6,14 +6,30 @@ This is a template for writing academic papers in Markdown. It uses Pandoc to co
 
 ### Running locally
 
-This template is developed for macOS and Linux. If you're on Windows, use [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install).
+This template is developed for macOS and Linux. If you're on Windows, use [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install) and follow the instructions for Linux.
 
-You will need to install:
+#### macOS
 
-- [TeX Live](https://www.tug.org/texlive/)
-- [Pandoc](https://pandoc.org/installing.html)
-- [fswatch](https://github.com/emcrisostomo/fswatch/releases) (if you're on macOS)
-- [inotify-tools](https://github.com/rvoicilas/inotify-tools/wiki) (if you're on Linux)
+1. Download and install [MacTeX](https://www.tug.org/mactex/mactex-download.html) (LaTeX distribution)
+
+2. Install packages with [Homebrew](https://brew.sh/):
+
+   ```bash
+   brew install pandoc # For compiling Markdown to LaTeX
+   brew install fswatch # For watching Markdown files and automatically compiling the PDF
+   brew install librsvg # For SVG image support
+   ```
+
+#### Linux
+
+Install packages:
+
+```bash
+sudo apt install texlive-full # LaTeX distribution
+sudo apt install pandoc # For compiling Markdown to LaTeX
+sudo apt install inotify-tools # For watching Markdown files and automatically compiling the PDF
+sudo apt install librsvg2-bin # For SVG image support
+```
 
 ### Running in GitHub Codespaces
 
