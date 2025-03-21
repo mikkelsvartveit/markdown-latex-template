@@ -6,5 +6,6 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     texlive-full \
     pandoc \
     inotify-tools \
+    librsvg2-bin \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
